@@ -1,0 +1,46 @@
+.container {
+  display: grid;
+  grid-template-columns: 350px auto 10px 10px;
+  grid-template-rows: 50px 40px auto 70px;
+  gap: 10px 10px;
+  grid-template-areas:
+    "nav header header header"
+    "nav body body body"
+    "left_sidebar body body body"
+    "footer footer footer footer";
+  grid-auto-flow:row;
+}
+
+.navbar {
+  grid-column: 1;
+  grid-row: 1/2;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  font-weight: normal;
+  font-family: monospace;
+}
+.navbar a {
+  font-size: 1.3em;
+  padding: 20px 0px 40px 0px;
+}
+
+.header {
+  grid-column:2/4;
+  grid-row:1;
+  justify-content: left;
+}
+
+.body {
+  grid-columns: 2/4;
+  grid-rows: 2/3;
+}
+
+.footer {
+  grid-columns: 1/4;
+  grid-rows: 4;
+}
+
+#navbar {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+}
